@@ -1,15 +1,18 @@
-class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        previousMap = {}
+class Solution(object):
+    def twoSum(self, nums, target):
+        """
+        1. traverse the input array for once, retrieve value and index
+            2. if target - value in map -> return
+            3. else -> store the current pair into map
 
-        for i, num in enumerate(nums):
-            # enumarate(array)
-            difference = target - num
-            if (difference in previousMap):
-                # key in map
-                return [previousMap[difference], i]
-                # value in map
+        Time: O(n) -- traverse once
+        Space: O(n) -- for HashMap
+        """
+        checkMap = {} # initialized a map, whose items are value : index
+        for index, value in enumerate(nums):
+            match = target - value
+            if match in checkMap:
+                return [checkMap[match], index]
             else:
-                previousMap[num] = i
-                # insert into a map
-        return
+                checkMap[value] = index
+        

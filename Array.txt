@@ -1,0 +1,7 @@
+Strategies to improve performance of array traveral:
+1. If we only care about the existence of some items, and don't want to apply any operations on them
+    -> use HashMap or HashSet, which don't allow duplicates
+2. If we want to do operations on two items (like do comparison):
+    -> use two pointers / two variables
+3. If we used many intermediate arrays to store temp results
+    -> make sure to improve the algorithm to in-place ones!

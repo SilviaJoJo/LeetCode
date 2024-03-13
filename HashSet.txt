@@ -1,0 +1,15 @@
+(Separate Chaining) HashSet (with resizing) has a perfect performance on avarage:
+    Big Theta of 1 - contains
+    Big Theta of 1 - add
+So we are encouraged to use HashSet, instead of Array, when we only care about the existence of some items,
+and don't want to apply any operations on them. This way we will have much better performance.
+
+[Python] HashSet is represented by set
+1. initialize:
+    Set = set()
+2. add:
+    Set.add(item)
+3. contains:
+    in / not in
+4. traverse:
+    for item in Set
