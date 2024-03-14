@@ -3,5 +3,10 @@ Strategies to improve performance of array traveral:
     -> use HashMap or HashSet, which don't allow duplicates
 2. If we want to do operations on two items (like do comparison):
     -> use two pointers / two variables
+    most cases we can complete our task in linear time!
 3. If we used many intermediate arrays to store temp results
     -> make sure to improve the algorithm to in-place ones!
+4. If we want to find some value in O(log n) time
+    -> use Binary Search algorithm! usually with double pointers (recursion and iteration are both okay)
+5. If we want to extract unqiue combinations out of many duplicates
+    -> sort the array first! and we can also use precheck to greatly improve performance
