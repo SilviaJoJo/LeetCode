@@ -1,0 +1,22 @@
+There are some common bitwise operators in different languages (at least Python and Java):
+1. bitwise xor:
+    ^
+2. bitwise and:
+    &
+3. bitwise or:
+    |
+4. bitwise shift:
+    >> n (shift to right for n bits);
+    << n (shift to left for n bits)
+5. a shorthand: (this is recommended to use, in case that we forget about reassigning values!)
+    a = a ^ b -> a ^= b
+    a = a & b -> a &= b
+    a = a << 1 -> a <<= 1
+Usually those kind of leetcode problems take O(1) time and O(1) memory
+Sometimes binary problems are associated with dynamic programming:
+    when we are asked to observe and summarize the pattern for incrementing sequences
+    0 - 1 - 2 - 4 -8 (including any numbers in the middle)
+1. initialize an array called dp = [0] * numbers
+2. initialize a variable called largest2N -- keep track of the current largest 2N numbers
+3. while loop
+    use already-known dp[i] to deduce dp[j]
