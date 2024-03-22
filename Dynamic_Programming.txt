@@ -3,6 +3,8 @@ Some approaches are given in the reversed order of recommendation:
 1. recursion: the most intuitive ones
     time complexity is terrible! -> as a result, recursion is almost never used in dynamic programming
 2. recursion with caching/ memoization
+    in this case, dp is a HashMap instead of list, to store computed values in an efficient way
+    this can mostly be adapted into the 3rd approach! bottom-up iteration + dp list
 3. array: desirable time complexity, mostly O(n)
     dp[n]
     to make it convenient to use values, we should think about the order of storing values:
