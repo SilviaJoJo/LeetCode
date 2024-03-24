@@ -7,6 +7,16 @@ BFS? DFS?
         if visited, return
         else do some operation, store in visited, return the value (value in HashMap or other things)
 2. BFS
+    use some data structure to represent "visited": HashSet or HashMap
+        it can be tricky about when to add or remove items from a set
+    use iteration -> mostly a helper functions is involved
+        use a queue structure (Python: collections.deque())
+        while q: 
+            popLeft to get the current item
+            check whether it's qualified
+                if so: do some operation, and add all its child/neighbors to the queue
+                else: continue
+        return means the whole search has ended, and all related nodes have been marked visited
 There are 3 representations of graphs:
 1. ajacency matrix: 2D array
     recursion goes to 4 directions (or 2 in some cases)
@@ -14,3 +24,7 @@ There are 3 representations of graphs:
 2. edge set: HashSet(all edges)
 3. ajacency list: HashMap{node: all its neighbors / nodes pointed by it}
 sometimes one of them is provided, but may not be the best form to help us, so we can convert to others
+Classic graph-related problems are:
+1. determine whether or not there contains a circle
+2. determine whether or not the graph is fully-connected
+    if not, find the total number of "islands"
