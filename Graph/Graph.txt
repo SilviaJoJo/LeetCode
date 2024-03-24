@@ -1,0 +1,16 @@
+The first step we take to solve a graph problem is usually to decide which algorithm to use:
+BFS? DFS?
+1. DFS
+    use some data structure to represent "visited": HashSet or HashMap
+        it can be tricky about when to add or remove items from a set
+    use recursion -> mostly a helper function is involved
+        if visited, return
+        else do some operation, store in visited, return the value (value in HashMap or other things)
+2. BFS
+There are 3 representations of graphs:
+1. ajacency matrix: 2D array
+    recursion goes to 4 directions (or 2 in some cases)
+    checking boundries -- can include this in base case!
+2. edge set: HashSet(all edges)
+3. ajacency list: HashMap{node: all its neighbors / nodes pointed by it}
+sometimes one of them is provided, but may not be the best form to help us, so we can convert to others
